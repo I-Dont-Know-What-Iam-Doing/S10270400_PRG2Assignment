@@ -16,7 +16,8 @@ namespace PRG2_Project
 
         public override double CalculateFees()
         {
-            double fees = 0;
+            // 50 discount
+            double fees =- 50;
             return fees;
         }
 

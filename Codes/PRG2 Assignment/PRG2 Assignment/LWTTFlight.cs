@@ -20,6 +20,14 @@ namespace PRG2_Project
         public override double CalculateFees()
         {
             double fee = 0;
+            // 500 fee
+            fee =+ 500;
+
+            if (Status == "")
+            {
+                
+            }
+
             return fee;
         }
 

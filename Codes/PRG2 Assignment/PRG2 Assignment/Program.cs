@@ -5,6 +5,7 @@
 //==========================================================
 
 using PRG2_Project;
+using System.Runtime.InteropServices;
 
 // Dictionary for flight details
 Dictionary<string, Flight> FlightDetails = new Dictionary<string, Flight>();
@@ -38,9 +39,9 @@ string[] lines = File.ReadAllLines("Flights.csv");
             FlightDetails.Add(fn, flight);
         }
 
-        else if (section[4] == null)
+        else
         {
-            NORMFlight flight = new NORMFlight(fn, or, des, et, "");
+            NORMFlight flight = new NORMFlight(fn, or, des, et, section[4]);  
             FlightDetails.Add(fn, flight);
         }
     }
@@ -101,14 +102,165 @@ while (true)
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
+            Console.WriteLine("Enter Flight Number: ");
+            string flnum = Console.ReadLine().ToUpper();
+            Console.WriteLine("Enter Boarding Gate Name: ");
+            string gname = Console.ReadLine().ToUpper();
+
+            foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
+            {
+                if (flnum == kvp.Key)
+                {
+                    Flight flight = kvp.Value;
+                    Console.WriteLine($"Flight Number: {flight.FlightNumber}");
+                    Console.WriteLine($"Origin: {flight.Origin}");
+                    Console.WriteLine($"Destination {flight.Destination}");
+                    Console.WriteLine($"Expected Time: {flight.ExpectedTime}");
+
+                    if (flight.Status == "")
+                    {
+                        Console.WriteLine($"Special Request Code: None");
+
+                    }
+
+                    else
+                    {
+                        Console.WriteLine($"Special Request Code: {flight.Status}");
+                    }
+
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Flight Number.");
+                    break;
+                }
+            }
+
+            // Morgen please make the dictionary!!!!! I need it to do this part :'(
+
+            Console.WriteLine("Would you like to update the status of the flight? (Y/N)");
+            string upd_stat = Console.ReadLine().ToUpper();
+            if (upd_stat == "Y")
+            {
+                Console.WriteLine("1. Delayed");
+                Console.WriteLine("2. Boarding");
+                Console.WriteLine("3. On Time");
+                Console.WriteLine("Please select the new status of the flight: ");
+                string new_stat = Console.ReadLine();
+                {
+                    if (new_stat == "1")
+                    {
+                        // append dict
+                        Console.WriteLine($"Flight {flnum} has been assigned to Boarding Gate {gname}!");
+                    }
+
+                    else if (new_stat == "2")
+                    {
+                        // append dict
+                        Console.WriteLine($"Flight {flnum} has been assigned to Boarding Gate {gname}!");
+                    }
+
+                    else if (new_stat == "3")
+                    {
+                        // append dict
+                        Console.WriteLine($"Flight {flnum} has been assigned to Boarding Gate {gname}!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Option.");
+                    }
+
+                }
+            }
+            else if (upd_stat == "N")
+            {
+                Console.WriteLine("Flight status not updated.");
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid Option.");
+            }
+
         }
 
         // Incomplete
         else if (option == "4")
         {
             Console.WriteLine("=============================================");
-            Console.WriteLine(" ");
+            Console.WriteLine("Flight Creation for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
+            while (true)
+            {
+                Console.WriteLine("Enter Flight Number: ");
+                string flnum = Console.ReadLine();
+                Console.WriteLine("Enter Flight Origin: ");
+                string flor = Console.ReadLine();
+                Console.WriteLine("Enter Flight Destination: ");
+                string fldes = Console.ReadLine();
+                Console.WriteLine("Enter Expected Departure/Arrival Time: ");
+                DateTime flet = Convert.ToDateTime(Console.ReadLine());
+
+
+                Console.WriteLine("Would you like to enter a Special Request Code? (Y/N): ");
+                string src_opt = Console.ReadLine().ToUpper();
+
+                string src_code = "";
+                if (src_opt == "Y")
+                {
+                    Console.WriteLine("Specify the Special Request Code (DDJB/CFFT/LWTT)");
+                    src_code = Console.ReadLine().ToUpper();
+                    if (src_code == "DDJB")
+                    {
+                        DDJBFlight flight = new DDJBFlight(flnum, flor, fldes, flet, src_code, 0);
+                        FlightDetails.Add(flnum, flight);
+                    }
+                    else if (src_code == "CFFT")
+                    {
+                        CFFTFlight flight = new CFFTFlight(flnum, flor, fldes, flet, src_code, 0);
+                        FlightDetails.Add(flnum, flight);
+                    }
+                    else if (src_code == "LWTT")
+                    {
+                        LWTTFlight flight = new LWTTFlight(flnum, flor, fldes, flet, src_code, 0);
+                        FlightDetails.Add(flnum, flight);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Code.");
+                    }
+
+                }
+                else if (src_opt == "N")
+                {
+                    src_code = "";
+                    NORMFlight flight = new NORMFlight(flnum, flor, fldes, flet, src_code);
+                    FlightDetails.Add(flnum, flight);
+                }
+
+                string flightinfo = $"{flnum},{flor},{fldes},{flet},{src_code}";
+
+                File.AppendAllText("flights.csv", flightinfo);
+
+                Console.WriteLine("Would you like to add more flights? (Y/N) ");
+                string flopt = Console.ReadLine();
+                {
+                    if (flopt == "Y")
+                    {
+                        continue;
+                    }
+                    else if (flopt == "N")
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Option");
+                    }
+                }
+            }
+
         }
 
         // Incomplete
