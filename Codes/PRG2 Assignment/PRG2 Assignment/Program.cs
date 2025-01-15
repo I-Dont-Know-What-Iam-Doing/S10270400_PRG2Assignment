@@ -1,4 +1,10 @@
-﻿using PRG2_Project;
+﻿//==========================================================
+// Student Number : S10270400G
+// Student Name : Teo Yao Xiang
+// Partner Name : Morgen Yap
+//==========================================================
+
+using PRG2_Project;
 
 // Dictionary for flight details
 Dictionary<string, Flight> FlightDetails = new Dictionary<string, Flight>();
@@ -64,6 +70,7 @@ while (true)
     Menu();
     string option = Console.ReadLine();
     {
+        // Incomplete
         if (option == "1")
         {
             Console.WriteLine("=============================================");
@@ -80,14 +87,63 @@ while (true)
             }
         }
 
+        // Incomplete
+        else if (option == "2")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+        }
+
+        // Incomplete
+        else if (option == "3")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+        }
+
+        // Incomplete
+        else if (option == "4")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================");
+        }
+
+        // Incomplete
+        else if (option == "5")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("List of Airlines for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+        }
+
+        // Incomplete
+        else if (option == "6")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("List of Airlines for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+        }
+
+        // Incomplete
+        else if (option == "7")
+        {
+            Console.WriteLine("=============================================");
+            Console.WriteLine("Flight Schedule for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+        }
+
         else if (option == "0")
         {
+            Console.WriteLine("Goodbye!");
             break;
         }
 
         else
         {
-            Console.WriteLine("Invalid option");
+            Console.WriteLine("Invalid option!");
         }
     }
 }
