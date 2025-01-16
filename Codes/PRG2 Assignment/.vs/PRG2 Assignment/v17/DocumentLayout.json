@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\",
+  "WorkspaceRootPath": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\cfftflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\cfftflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\lwttflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\lwttflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\normflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\normflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\normflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\sickest-changi-airport-code\\codes\\prg2 assignment\\prg2 assignment\\ddjbflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\lwttflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\lwttflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\cfftflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\cfftflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\users\\teoyx\\documents\\github\\sickest-singapore-airline-code\\codes\\prg2 assignment\\prg2 assignment\\ddjbflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\ddjbflight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,28 +42,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Airline.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Airline.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Airline.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\Airline.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Airline.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Airline.cs",
               "RelativeToolTip": "PRG2 Assignment\\Airline.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-16T01:08:27.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CFFTFlight.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\CFFTFlight.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\CFFTFlight.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\CFFTFlight.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\CFFTFlight.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\CFFTFlight.cs",
               "RelativeToolTip": "PRG2 Assignment\\CFFTFlight.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -73,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "DDJBFlight.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\DDJBFlight.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\DDJBFlight.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\DDJBFlight.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\DDJBFlight.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\DDJBFlight.cs",
               "RelativeToolTip": "PRG2 Assignment\\DDJBFlight.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,48 +83,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "LWTTFlight.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\LWTTFlight.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\LWTTFlight.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\LWTTFlight.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\LWTTFlight.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\LWTTFlight.cs",
               "RelativeToolTip": "PRG2 Assignment\\LWTTFlight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T08:39:44.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NORMFlight.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\NORMFlight.cs",
-              "RelativeDocumentMoniker": "PRG2 Assignment\\NORMFlight.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\NORMFlight.cs",
-              "RelativeToolTip": "PRG2 Assignment\\NORMFlight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T08:33:11.01Z"
+              "WhenOpened": "2025-01-15T08:39:44.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "NORMFlight.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\NORMFlight.cs",
+              "RelativeDocumentMoniker": "PRG2 Assignment\\NORMFlight.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\NORMFlight.cs",
+              "RelativeToolTip": "PRG2 Assignment\\NORMFlight.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T08:33:11.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Flight.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flight.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flight.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\Flight.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flight.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flight.cs",
               "RelativeToolTip": "PRG2 Assignment\\Flight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T08:18:49.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Flights.csv",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
               "RelativeDocumentMoniker": "PRG2 Assignment\\Flights.csv",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
               "RelativeToolTip": "PRG2 Assignment\\Flights.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
@@ -132,15 +134,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Program.cs",
               "RelativeDocumentMoniker": "PRG2 Assignment\\Program.cs",
-              "ToolTip": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Program.cs",
+              "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Program.cs",
               "RelativeToolTip": "PRG2 Assignment\\Program.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAwA4AAAABAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T14:14:22.256Z"
+              "WhenOpened": "2025-01-13T14:14:22.256Z",
+              "EditorCaption": ""
             }
           ]
         }

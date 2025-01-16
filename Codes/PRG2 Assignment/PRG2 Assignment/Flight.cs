@@ -6,7 +6,7 @@
 
 namespace PRG2_Project
 {
-    abstract class Flight
+    public abstract class Flight
     {
         private string flightNumber;
         public string FlightNumber { get; set; }
