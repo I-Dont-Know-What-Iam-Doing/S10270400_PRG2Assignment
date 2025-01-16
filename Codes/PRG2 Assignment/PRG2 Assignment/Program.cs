@@ -12,18 +12,37 @@ Dictionary<string, Airline> airlinesDetails = new Dictionary<string, Airline>();
 // airlines.csv file reading
 string[] airlineLines = File.ReadAllLines("airlines.csv");
 {
-    for (int i = 1; i < airlineLines.Length; i++)
+    try
     {
-        string line = airlineLines[i];
-        string[] section = line.Split(',');
+        for (int i = 1; i < airlineLines.Length; i++) // skip first line of data (header)
+        {
+            string line = airlineLines[i];
+            string[] section = line.Split(',');
 
-        // Airline details
-        string name = section[0];
-        string code = section[1];
+            // Airline details
+            string name = section[0]; // airline name
+            string code = section[1]; // airline code
 
-        // Create the airline objects and add it to the dictionary
-        Airline airline = new Airline(name, code);
-        airlinesDetails.Add(code, airline);
+            // Create the airline objects and add it to the dictionary
+            if (!airlinesDetails.ContainsKey(code))
+            {
+                Airline airline = new Airline(name, code);
+                airlinesDetails.Add(code, airline);
+            }
+            else
+            {
+                Console.WriteLine($"Duplicate airline code found: {code}. Entry will be skipped.");
+            }
+        }
+        Console.WriteLine("Airlines loaded successfully!");
+    }
+    catch (FileNotFoundException)
+    {
+        Console.WriteLine($"Error: File airlines.csv not found.");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred while loading airlines: {ex.Message}");
     }
 }
 

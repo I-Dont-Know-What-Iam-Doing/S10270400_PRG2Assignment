@@ -29,16 +29,21 @@ namespace S10270400_PRG2Assignment
         // Methods
         public bool AddFlight(Flight flight)
         {
-            if (flight != null && !Flights.ContainsKey(flight.FlightNumber))
+            if (flight == null)
             {
-                Flights.Add(flight.FlightNumber, flight);
-                return true; // Added
+                Console.WriteLine("You cannot add a null flight.");
+                return false;
             }
-            return false; // Flight is null or already exists
-        }
-        public bool RemoveFlight(string flightNumber)
-        {
-            return Flights.Remove(flightNumber); // Remove the flight if it exists
+
+            if (flights.ContainsKey(flight.FlightNumber))
+            {
+                Console.WriteLine($"Flight with number {flight.FlightNumber} already exists.");
+                Console.WriteLine("Please do not key in duplicate flight numbers.");
+                return false;
+            }
+
+            flights.Add(flight.FlightNumber, flight);
+            return true;
         }
 
         public double CalculateFees()
@@ -51,9 +56,28 @@ namespace S10270400_PRG2Assignment
             }
             return totalFees;
         }
+
+        public bool RemoveFlight(string flightNumber)
+        {
+            if (string.IsNullOrEmpty(flightNumber))
+            {
+                Console.WriteLine("Flight number cannot be null or empty.");
+                return false;
+            }
+
+            if (flights.ContainsKey(flightNumber))
+            {
+                flights.Remove(flightNumber);
+                return true;
+            }
+
+            Console.WriteLine($"Flight with number {flightNumber} not found.");
+            return false;
+        }
+
         public override string ToString()
         {
-            return $"Airline Code: {Code}, Name: {Name}, Total Flights: {Flights.Count}";
+            return $"Airline Code: {Code}, Name: {Name}, Total Flights: {flights.Count}";
         }
     }
 }
