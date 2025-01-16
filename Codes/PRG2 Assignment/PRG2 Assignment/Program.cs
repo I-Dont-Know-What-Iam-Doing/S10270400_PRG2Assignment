@@ -6,6 +6,27 @@
 
 using PRG2_Project;
 
+// Dictionary for airline details
+Dictionary<string, Airline> airlinesDetails = new Dictionary<string, Airline>();
+
+// airlines.csv file reading
+string[] airlineLines = File.ReadAllLines("airlines.csv");
+{
+    for (int i = 1; i < airlineLines.Length; i++)
+    {
+        string line = airlineLines[i];
+        string[] section = line.Split(',');
+
+        // Airline details
+        string name = section[0];
+        string code = section[1];
+
+        // Create the airline objects and add it to the dictionary
+        Airline airline = new Airline(name, code);
+        airlinesDetails.Add(code, airline);
+    }
+}
+
 // Dictionary for flight details
 Dictionary<string, Flight> FlightDetails = new Dictionary<string, Flight>();
 
