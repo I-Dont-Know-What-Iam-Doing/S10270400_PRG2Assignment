@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\morge\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\teoyx\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\PRG2 Assignment.csproj",
+      "projectUniqueName": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\PRG2 Assignment.csproj",
       "projectName": "PRG2 Assignment",
-      "projectPath": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\PRG2 Assignment.csproj",
-      "packagesPath": "C:\\Users\\morge\\.nuget\\packages\\",
-      "outputPath": "C:\\Documents\\GitHub\\Sickest-Changi-Airport-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\obj\\",
+      "projectPath": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\PRG2 Assignment.csproj",
+      "packagesPath": "C:\\Users\\teoyx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\morge\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\teoyx\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

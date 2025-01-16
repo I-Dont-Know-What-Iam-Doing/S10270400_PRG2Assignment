@@ -77,7 +77,7 @@ namespace S10270400_PRG2Assignment
 
         public override string ToString()
         {
-            return $"Airline Code: {Code}, Name: {Name}, Total Flights: {flights.Count}";
+            return $"Airline Code: {Code}, Name: {Name}, Total Flights: {Flights.Count}";
         }
     }
 }
