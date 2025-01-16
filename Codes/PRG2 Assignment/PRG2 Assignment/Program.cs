@@ -4,7 +4,7 @@
 // Partner Name : Morgen Yap
 //==========================================================
 
-using PRG2_Project;
+using S10270400_PRG2Assignment;
 
 // Dictionary for airline details
 Dictionary<string, Airline> airlinesDetails = new Dictionary<string, Airline>();

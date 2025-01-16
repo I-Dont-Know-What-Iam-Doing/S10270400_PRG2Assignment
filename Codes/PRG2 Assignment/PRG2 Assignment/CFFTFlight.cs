@@ -5,7 +5,7 @@
 //==========================================================
 
 // Request fee unfinished
-namespace PRG2_Project
+namespace S10270400_PRG2Assignment
 {
     class CFFTFlight : Flight
     {

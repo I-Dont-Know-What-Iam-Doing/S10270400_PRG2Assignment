@@ -4,7 +4,7 @@
 // Partner Name : Morgen Yap
 //==========================================================
 
-namespace PRG2_Project
+namespace S10270400_PRG2Assignment
 {
     public abstract class Flight
     {
