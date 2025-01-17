@@ -16,7 +16,7 @@ namespace S10270400_PRG2Assignment
         // Properties 
         public string Name { get; set; }
         public string Code { get; set; }
-        public Dictionary<string, Flight> Flights { get; private set; }
+        public Dictionary<string, Flight> Flights { get; set; }
 
         // Constructor 
         public Airline(string name, string code)

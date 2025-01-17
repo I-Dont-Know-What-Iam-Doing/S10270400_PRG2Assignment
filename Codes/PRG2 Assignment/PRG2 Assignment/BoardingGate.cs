@@ -1,4 +1,4 @@
-﻿    //==========================================================
+﻿//==========================================================
 // Student Number : S10270400G
 // Student Name : Teo Yao Xiang
 // Partner Name : Morgen Yap
@@ -16,18 +16,18 @@ namespace S10270400_PRG2Assignment
         private Flight flight;
 
         // Properties
-        public string GateName { get; private set; }
-        public bool SupportsCFFT { get; private set; }
-        public bool SupportsDDJB { get; private set; }
-        public bool SupportsLWTT { get; private set; }
-        public Flight AssignedFlight { get; private set; } // Assigned flight
+        public string GateName { get; set; }
+        public bool SupportsCFFT { get; set; }
+        public bool SupportsDDJB { get; set; }
+        public bool SupportsLWTT { get; set; }
+        public Flight AssignedFlight { get; set; } // Assigned flight
 
         // Constructor
-        public BoardingGate(string gateName, bool supportsCFFT, bool supportsDDJB, bool supportsLWTT)
+        public BoardingGate(string gateName, bool supportsDDJB, bool supportsCFFT, bool supportsLWTT)
         {
             GateName = gateName;
-            SupportsCFFT = supportsCFFT;
             SupportsDDJB = supportsDDJB;
+            SupportsCFFT = supportsCFFT;
             SupportsLWTT = supportsLWTT;
             AssignedFlight = null; // initially, there is no flight assigned 
         }

@@ -52,7 +52,6 @@ foreach (var airline in airlinesDetails.Values)
     Console.WriteLine(airline.ToString());
 }
 
-
 // Dictionary for boarding gate details (Morgen)
 Dictionary<string, BoardingGate> boardingGatesDetails = new Dictionary<string, BoardingGate>();
 
@@ -115,6 +114,7 @@ string[] lines = File.ReadAllLines("Flights.csv");
         string or = section[1];
         string des = section[2];
         DateTime et = Convert.ToDateTime(section[3]);
+
         if (section[4] == "CFFT")
         {
             CFFTFlight flight = new CFFTFlight(fn, or, des, et, section[4], 0);
@@ -172,22 +172,38 @@ while (true)
             Console.WriteLine("List of Flights for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
             Console.WriteLine("{0,-18}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected Departure/Arrival Time");
-
+            
             foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
             {
-                Flight flight = kvp.Value;
-                Console.WriteLine("{0,-18}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, "Fill this in morgen", flight.Origin, flight.Destination, flight.ExpectedTime);
+                Flight flight = kvp.Value; 
+                string airlineName = "Unknown"; // default if no airline that matches is found
+
+                foreach (var airline in airlinesDetails.Values)
+                {
+                    if (airline.Flights.ContainsKey(flight.FlightNumber))
+                    {
+                        airlineName = airline.Name; 
+                        break; 
+                    }
+                }
+                Console.WriteLine("{0,-18}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, airlineName, flight.Origin, flight.Destination, flight.ExpectedTime);
                 // Hi Morgen, remember to replace the airline name string when youre done with the csv and stuff, delete this comment once done :)
                 // If you configure this code into something differnt, let me know in telegram fam.
             }
         }
 
-        // Incomplete
         else if (option == "2")
         {
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
+            Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}", "Gate Name", "DDJB", "CFFT", "LWTT");
+
+            foreach (KeyValuePair<string, BoardingGate> kvp in boardingGatesDetails)
+            {
+                BoardingGate gate = kvp.Value;
+                Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}", gate.GateName, gate.SupportsDDJB, gate.SupportsCFFT, gate.SupportsLWTT);
+            }
         }
 
         // Incomplete
