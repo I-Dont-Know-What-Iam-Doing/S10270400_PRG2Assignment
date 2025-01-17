@@ -104,7 +104,7 @@ foreach (var gate in boardingGatesDetails.Values)
 Dictionary<string, Flight> FlightDetails = new Dictionary<string, Flight>();
 
 // flights csv file reading (Yao Xiang)
-string[] lines = File.ReadAllLines("Flights.csv");
+string[] lines = File.ReadAllLines("flights.csv");
 {
     for (int i = 1; i < lines.Length; i++)
     {
@@ -205,6 +205,17 @@ while (true)
                 Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}", gate.GateName, gate.SupportsDDJB, gate.SupportsCFFT, gate.SupportsLWTT);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
 
         // Incomplete
         else if (option == "3")
