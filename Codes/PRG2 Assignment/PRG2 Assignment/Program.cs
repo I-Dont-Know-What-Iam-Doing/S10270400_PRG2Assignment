@@ -98,30 +98,43 @@ string[] lines = File.ReadAllLines("flights.csv");
         string or = section[1];
         string des = section[2];
         DateTime et = Convert.ToDateTime(section[3]);
+        string airlineCode = fn.Substring(0, 2); // Extract airline code (e.g., "SQ")
+
+        Flight flight; // declaring of flight obj 
+
 
         if (section[4] == "CFFT")
         {
-            CFFTFlight flight = new CFFTFlight(fn, or, des, et, section[4], 0);
-            FlightDetails.Add(fn, flight);
+            flight = new CFFTFlight(fn, or, des, et, section[4], 0);
         }
 
         else if (section[4] == "DDJB")
         {
-            DDJBFlight flight = new DDJBFlight(fn, or, des, et, section[4], 0);
-            FlightDetails.Add(fn, flight);
+            flight = new DDJBFlight(fn, or, des, et, section[4], 0);
         }
 
         else if (section[4] == "LWTT")
         {
-            LWTTFlight flight = new LWTTFlight(fn, or, des, et, section[4], 0);
-            FlightDetails.Add(fn, flight);
+            flight = new LWTTFlight(fn, or, des, et, section[4], 0);
         }
 
         else
         {
-            NORMFlight flight = new NORMFlight(fn, or, des, et, section[4]);
-            FlightDetails.Add(fn, flight);
+            flight = new NORMFlight(fn, or, des, et, section[4]);
         }
+
+        FlightDetails.Add(fn, flight); // add flight to dict
+
+        if (airlinesDetails.ContainsKey(airlineCode))
+        {
+            Airline airline = airlinesDetails[airlineCode];
+            airline.Flights.Add(fn, flight); // Add the flight to the airline's Flights dictionary
+        }
+        else
+        {
+            Console.WriteLine($"Warning: Airline code {airlineCode} not found for flight {fn}.");
+        }
+
     }
 }
 
