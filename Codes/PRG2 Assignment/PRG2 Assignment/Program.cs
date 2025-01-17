@@ -155,7 +155,7 @@ while (true)
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Flights for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
-            Console.WriteLine("{0,-18}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected \nDeparture/Arrival Time");
+            Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected \nDeparture/Arrival Time");
             
             foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
             {
@@ -170,7 +170,7 @@ while (true)
                         break; 
                     }
                 }
-                Console.WriteLine("{0,-18}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, airlineName, flight.Origin, flight.Destination, flight.ExpectedTime);
+                Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, airlineName, flight.Origin, flight.Destination, flight.ExpectedTime);
                 // Hi Morgen, remember to replace the airline name string when youre done with the csv and stuff, delete this comment once done :)
                 // If you configure this code into something differnt, let me know in telegram fam.
             }
