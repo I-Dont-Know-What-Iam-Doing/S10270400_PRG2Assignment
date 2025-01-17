@@ -34,7 +34,6 @@ try
             Console.WriteLine($"Duplicate airline code found: {code}. Entry will be skipped.");
         }
     }
-    Console.WriteLine("Airlines loaded successfully!");
 }
 catch (FileNotFoundException)
 {
@@ -43,13 +42,6 @@ catch (FileNotFoundException)
 catch (Exception ex)
 {
     Console.WriteLine($"An error occurred while loading airlines: {ex.Message}");
-}
-
-// Load airlines.csv file (Morgen)
-Console.WriteLine("\nLoaded Airlines:");
-foreach (var airline in airlinesDetails.Values)
-{
-    Console.WriteLine(airline.ToString());
 }
 
 // Dictionary for boarding gate details (Morgen)
@@ -82,7 +74,6 @@ try
             Console.WriteLine($"Duplicate boarding gate found: {gateName}. Entry will be skipped.");
         }
     }
-    Console.WriteLine("Boarding gate loaded successfully!");
 }
 catch (FileNotFoundException)
 {
@@ -91,13 +82,6 @@ catch (FileNotFoundException)
 catch (Exception ex)
 {
     Console.WriteLine($"An error occurred while loading boarding gates: {ex.Message}");
-}
-
-// Load boarding gate.csv file (Morgen)
-Console.WriteLine("\nLoaded Airlines:");
-foreach (var gate in boardingGatesDetails.Values)
-{
-    Console.WriteLine(gate.ToString());
 }
 
 // Dictionary for flight details (Yao Xiang)
@@ -197,12 +181,12 @@ while (true)
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
-            Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}", "Gate Name", "DDJB", "CFFT", "LWTT");
+            Console.WriteLine("{0,-18}{1,-29}{2,-29}{3,-10}", "Gate Name", "DDJB", "CFFT", "LWTT");
 
             foreach (KeyValuePair<string, BoardingGate> kvp in boardingGatesDetails)
             {
                 BoardingGate gate = kvp.Value;
-                Console.WriteLine("{0,-10}{1,-10}{2,-10}{3,-10}", gate.GateName, gate.SupportsDDJB, gate.SupportsCFFT, gate.SupportsLWTT);
+                Console.WriteLine("{0,-18}{1,-29}{2,-29}{3,-10}", gate.GateName, gate.SupportsDDJB, gate.SupportsCFFT, gate.SupportsLWTT);
             }
         }
 
