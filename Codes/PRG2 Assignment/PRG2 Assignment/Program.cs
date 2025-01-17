@@ -169,23 +169,26 @@ while (true)
             Console.WriteLine("List of Flights for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
             Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected \nDeparture/Arrival Time");
-            
+
             foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
             {
-                Flight flight = kvp.Value; 
+                Flight flight = kvp.Value;
                 string airlineName = "Unknown"; // default if no airline that matches is found
 
                 foreach (var airline in airlinesDetails.Values)
                 {
                     if (airline.Flights.ContainsKey(flight.FlightNumber))
                     {
-                        airlineName = airline.Name; 
-                        break; 
+                        airlineName = airline.Name;
+                        break;
                     }
                 }
                 Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, airlineName, flight.Origin, flight.Destination, flight.ExpectedTime);
-                // Hi Morgen, remember to replace the airline name string when youre done with the csv and stuff, delete this comment once done :)
-                // If you configure this code into something differnt, let me know in telegram fam.
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
             }
         }
 
@@ -201,20 +204,19 @@ while (true)
                 BoardingGate gate = kvp.Value;
                 Console.WriteLine("{0,-18}{1,-29}{2,-29}{3,-10}", gate.GateName, gate.SupportsDDJB, gate.SupportsCFFT, gate.SupportsLWTT);
             }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
 
 
 
 
 
-
-
-
-
-
-
-
-        // Incomplete
+        // ==============================================================================================================================================================================
+        // INCOMPLETE
         else if (option == "3")
         {
             Console.WriteLine("=============================================");
@@ -301,6 +303,11 @@ while (true)
                 Console.WriteLine("Invalid Option.");
             }
 
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
+
         }
 
         // Incomplete
@@ -377,17 +384,55 @@ while (true)
                         Console.WriteLine("Invalid Option");
                     }
                 }
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine();
+                }
             }
-
         }
 
-        // Incomplete
+
+        // Completed
         else if (option == "5")
         {
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Airlines for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
+            Console.WriteLine("{0,-14}{1,-30}", "Airline Code", "Airline Name");
+
+            foreach (var airline in airlinesDetails.Values) // display the airlines 
+            {
+                Console.WriteLine("{0,-14}{1,-30}", airline.Code, airline.Name);
+            }
+
+            Console.Write("Enter Airline Code: "); // prompt user to key 2 letter airline code
+            string selectedCode = Console.ReadLine().ToUpper();
+
+            // Validate the airline code
+            if (!airlinesDetails.ContainsKey(selectedCode))
+            {
+                Console.WriteLine("Invalid Airline Code.");
+            }
+            else
+            {
+                Airline selectedAirline = airlinesDetails[selectedCode];
+                Console.WriteLine("=============================================");
+                Console.WriteLine($"List of Flights for {selectedAirline.Name}");
+                Console.WriteLine("=============================================");
+                Console.WriteLine("{0,-16}{1,-23}{2,-24}{3,-23}{4,-25}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected \nDeparture/Arrival Time");
+
+                foreach (var flight in selectedAirline.Flights.Values)
+                {
+                    Console.WriteLine("{0,-16}{1,-23}{2,-24}{3,-23}{4,-25}", flight.FlightNumber, selectedAirline.Name, flight.Origin, flight.Destination, flight.ExpectedTime);
+                }
+
+                for (int i = 0; i < 5; i++)
+                {
+                    Console.WriteLine();
+                }
+            }
         }
+
 
         // Incomplete
         else if (option == "6")
@@ -417,4 +462,3 @@ while (true)
         }
     }
 }
-
