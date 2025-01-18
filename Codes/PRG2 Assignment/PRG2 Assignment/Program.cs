@@ -671,11 +671,19 @@ while (true)
         else if (option == "7")
         {
 
+            // To be implemented
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
+
         }
 
         else if (option == "0")
         {
             Console.WriteLine("Goodbye!");
+            break;
         }
 
     }

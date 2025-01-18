@@ -22,6 +22,7 @@ namespace S10270400_PRG2Assignment
 
         private string status;
         public string Status { get; set; }
+        public string SpecialRequest { get; set; } // Add this property
 
         public Flight()
         {
