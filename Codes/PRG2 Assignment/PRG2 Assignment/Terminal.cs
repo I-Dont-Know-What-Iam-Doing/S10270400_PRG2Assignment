@@ -14,14 +14,14 @@ namespace S10270400_PRG2Assignment
         private string terminalName;
         private Dictionary<string, Airline> airlines;
         private Dictionary<string, Flight> flights;
-        private Dictionary<string, BoardingGate> gates;
+        private Dictionary<string, BoardingGate> boardinggates;
         private Dictionary<string, double> gateFees;
 
         // Properties
         public string TerminalName { get; set; }
         public Dictionary<string, Airline> Airlines { get; set; }
         public Dictionary<string, Flight> Flights { get; set; }
-        public Dictionary<string, BoardingGate> Gates { get; set; }
+        public Dictionary<string, BoardingGate> BoardingGates { get; set; }
         public Dictionary<string, double> GateFees { get; set; }
 
         // Constructor 
@@ -35,7 +35,7 @@ namespace S10270400_PRG2Assignment
             TerminalName = terminalName;
             Airlines = new Dictionary<string, Airline>();
             Flights = new Dictionary<string, Flight>();
-            Gates = new Dictionary<string, BoardingGate>();
+            BoardingGates = new Dictionary<string, BoardingGate>();
             GateFees = new Dictionary<string, double>();
         }
 
@@ -48,14 +48,18 @@ namespace S10270400_PRG2Assignment
                 return false;
             }
 
-            if (Airlines.ContainsKey(airline.Code))
+            else if (Airlines.ContainsKey(airline.Code))
             {
                 Console.WriteLine($"Airline with code {airline.Code} already exists.");
                 return false;
             }
 
-            Airlines[airline.Code] = airline;
-            return true;
+            else
+            {
+
+                Airlines[airline.Code] = airline;
+                return true;
+            }
 
         }
 
@@ -67,13 +71,13 @@ namespace S10270400_PRG2Assignment
                 return false;
             }
 
-            if (Gates.ContainsKey(boardingGate.GateName))
+            if (BoardingGates.ContainsKey(boardingGate.GateName))
             {
                 Console.WriteLine($"Boarding gate {boardingGate.GateName} already exists.");
                 return false;
             }
 
-            Gates[boardingGate.GateName] = boardingGate;
+            BoardingGates[boardingGate.GateName] = boardingGate;
             return true;
         }
 
@@ -112,9 +116,9 @@ namespace S10270400_PRG2Assignment
                     }
 
                     // Add gate fee for flights assigned to a gate
-                    foreach (var gate in gates.Values)
+                    foreach (var gate in BoardingGates.Values)
                     {
-                        if (gate.AssignedFlight?.FlightNumber == flight.FlightNumber)
+                        if (gate.Flight?.FlightNumber == flight.FlightNumber)
                         {
                             totalFees += 300; 
                         }
@@ -128,7 +132,7 @@ namespace S10270400_PRG2Assignment
 
         public override string ToString()
         {
-            return $"Terminal Name: {terminalName}, Total Airlines: {airlines.Count}, Total Flights: {flights.Count}, Total Boarding Gates: {gates.Count}";
+            return $"Terminal Name: {terminalName}, Total Airlines: {airlines.Count}, Total Flights: {flights.Count}, Total Boarding Gates: {BoardingGates.Count}";
         }
     }
 }

@@ -42,7 +42,8 @@
               "RelativeToolTip": "PRG2 Assignment\\Flight.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T10:13:01.606Z"
+              "WhenOpened": "2025-01-18T10:13:01.606Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -54,7 +55,8 @@
               "RelativeToolTip": "PRG2 Assignment\\BoardingGate.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAACkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T09:42:10.997Z"
+              "WhenOpened": "2025-01-18T09:42:10.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -66,7 +68,8 @@
               "RelativeToolTip": "PRG2 Assignment\\Terminal.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAIwHgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T09:02:40.124Z"
+              "WhenOpened": "2025-01-18T09:02:40.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +79,7 @@
               "RelativeDocumentMoniker": "PRG2 Assignment\\Program.cs",
               "ToolTip": "C:\\Users\\teoyx\\Documents\\GitHub\\Sickest-Singapore-airline-code\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Program.cs",
               "RelativeToolTip": "PRG2 Assignment\\Program.cs",
-              "ViewState": "AgIAADwBAAAAAAAAAAAAAFEBAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAI8CAAAAAAAAAAAAAKACAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T08:56:25.095Z",
               "EditorCaption": ""
@@ -91,7 +94,8 @@
               "RelativeToolTip": "PRG2 Assignment\\Airline.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAA4wEMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T07:03:40.523Z"
+              "WhenOpened": "2025-01-18T07:03:40.523Z",
+              "EditorCaption": ""
             }
           ]
         }

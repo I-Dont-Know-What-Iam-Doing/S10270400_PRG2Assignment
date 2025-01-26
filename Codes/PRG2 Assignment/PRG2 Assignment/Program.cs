@@ -170,7 +170,7 @@ while (true)
             Console.WriteLine("=============================================");
             Console.WriteLine("List of Flights for Changi Airport Terminal 5");
             Console.WriteLine("=============================================");
-            Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected \nDeparture/Arrival Time");
+            Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", "Flight Number", "Airline Name", "Origin", "Destination", "Expected Departure/Arrival Time");
 
             foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
             {
@@ -540,7 +540,7 @@ while (true)
                         string assignedGate = "Unassigned";
                         foreach (var gate in boardingGatesDetails.Values)
                         {
-                            if (gate.AssignedFlight != null && gate.AssignedFlight.FlightNumber == selectedFlight.FlightNumber)
+                            if (gate.Flight != null && gate.Flight.FlightNumber == selectedFlight.FlightNumber)
                             {
                                 assignedGate = gate.GateName;
                                 break;
@@ -614,20 +614,20 @@ while (true)
                         {
                             BoardingGate newGate = boardingGatesDetails[newGateName];
 
-                            if (newGate.AssignedFlight == null)
+                            if (newGate.Flight == null)
                             {
                                 // Unassign the flight from the current gate
                                 foreach (var gate in boardingGatesDetails.Values)
                                 {
-                                    if (gate.AssignedFlight == selectedFlight)
+                                    if (gate.Flight == selectedFlight)
                                     {
-                                        gate.AssignedFlight = null;
+                                        gate.Flight = null;
                                         break;
                                     }
                                 }
 
                                 // Assign the flight to the new gate
-                                newGate.AssignedFlight = selectedFlight;
+                                newGate.Flight = selectedFlight;
                                 Console.WriteLine($"Flight {selectedFlight.FlightNumber} has been reassigned to Gate {newGateName}.");
                             }
                             else
@@ -670,13 +670,10 @@ while (true)
         }
         else if (option == "7")
         {
-
-            // To be implemented
-
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine();
-            }
+            Console.WriteLine("=============================================");
+            Console.WriteLine("List of Airlines for Changi Airport Terminal 5");
+            Console.WriteLine("=============================================");
+            
 
         }
 

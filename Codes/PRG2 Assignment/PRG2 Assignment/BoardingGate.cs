@@ -20,7 +20,7 @@ namespace S10270400_PRG2Assignment
         public bool SupportsCFFT { get; set; }
         public bool SupportsDDJB { get; set; }
         public bool SupportsLWTT { get; set; }
-        public Flight AssignedFlight { get; set; } // Assigned flight
+        public Flight Flight { get; set; } // Assigned flight
 
         // Constructor
         public BoardingGate(string gateName, bool supportsDDJB, bool supportsCFFT, bool supportsLWTT)
@@ -29,17 +29,17 @@ namespace S10270400_PRG2Assignment
             SupportsDDJB = supportsDDJB;
             SupportsCFFT = supportsCFFT;
             SupportsLWTT = supportsLWTT;
-            AssignedFlight = null; // initially, there is no flight assigned 
+            Flight = null; // initially, there is no flight assigned 
         }
 
         public double CalculateFees()
         {
-            if (AssignedFlight == null)
+            if (Flight == null)
             {
                 return 0.00; // no fees to be paid
             }
 
-            return AssignedFlight.CalculateFees();  // fee will be calculated using flight class
+            return Flight.CalculateFees();  // fee will be calculated using flight class
         }
 
         public override string ToString()

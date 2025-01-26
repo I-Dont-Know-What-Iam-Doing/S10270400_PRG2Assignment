@@ -6,7 +6,7 @@
 
 namespace S10270400_PRG2Assignment
 {
-    public abstract class Flight
+    public abstract class Flight : IComparable<Flight>
     {
         private string flightNumber;
         public string FlightNumber { get; set; }
@@ -43,6 +43,11 @@ namespace S10270400_PRG2Assignment
         public override string ToString()
         {
             return $"{Origin} {Destination} {ExpectedTime} {Status}";
+        }
+
+        public int CompareTo(Flight other)
+        {
+            return ExpectedTime.CompareTo(other.ExpectedTime);
         }
     }
 }

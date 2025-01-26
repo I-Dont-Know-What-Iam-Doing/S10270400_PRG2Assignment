@@ -65,7 +65,7 @@ namespace S10270400_PRG2Assignment
                 return false;
             }
 
-            if (flights.ContainsKey(flightNumber))
+            else if (flights.ContainsKey(flightNumber))
             {
                 flights.Remove(flightNumber);
                 return true;
