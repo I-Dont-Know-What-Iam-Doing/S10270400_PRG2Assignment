@@ -34,12 +34,11 @@ namespace S10270400_PRG2Assignment
 
         public double CalculateFees()
         {
-            if (Flight == null)
+            if (Flight != null)
             {
-                return 0.00; // no fees to be paid
+                return Flight.CalculateFees() + 300;
             }
-
-            return Flight.CalculateFees();  // fee will be calculated using flight class
+            return 0;
         }
 
         public override string ToString()

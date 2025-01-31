@@ -22,12 +22,7 @@ namespace S10270400_PRG2Assignment
 
         private string status;
         public string Status { get; set; }
-        public string SpecialRequest { get; set; } // Add this property
-
-        public Flight()
-        {
-
-        }
+        
 
         public Flight(string fn, string or, string des, DateTime et, string stat)
         {
@@ -38,7 +33,19 @@ namespace S10270400_PRG2Assignment
             Status = stat;
         }
 
-        public abstract double CalculateFees();
+        public virtual double CalculateFees()
+        {
+            double fee = 0;
+
+           
+            if (Origin.ToLower() == "singapore (sin)")
+                fee += 800; 
+            if (Destination.ToLower() == "singapore (sin)")
+                fee += 500; 
+
+            return fee;
+        }
+    
 
         public override string ToString()
         {

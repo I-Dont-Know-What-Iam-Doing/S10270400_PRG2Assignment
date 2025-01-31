@@ -16,9 +16,7 @@ namespace S10270400_PRG2Assignment
 
         public override double CalculateFees()
         {
-            // 50 discount
-            double fees =- 50;
-            return fees;
+            return base.CalculateFees();
         }
 
         public override string ToString()

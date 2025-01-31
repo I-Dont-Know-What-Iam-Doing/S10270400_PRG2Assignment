@@ -4,8 +4,6 @@
 // Partner Name : Morgen Yap
 //==========================================================
 
-using System.Xml.Linq;
-
 namespace S10270400_PRG2Assignment
 {
     public class Terminal
@@ -24,6 +22,10 @@ namespace S10270400_PRG2Assignment
         public Dictionary<string, BoardingGate> BoardingGates { get; set; }
         public Dictionary<string, double> GateFees { get; set; }
 
+        public Terminal()
+        {
+
+        }
         // Constructor 
         public Terminal(string terminalName)
         {
@@ -98,37 +100,60 @@ namespace S10270400_PRG2Assignment
         }
         public void PrintAirlineFees()
         {
-            Console.WriteLine("Airline Fees:");
-            foreach (var airline in airlines.Values)
+
+            foreach (var flight in Airlines.Values.SelectMany(a => a.Flights.Values))
             {
-                double totalFees = 0;
+                if (!BoardingGates.Values.Any(g => g.Flight?.FlightNumber == flight.FlightNumber))
+                {
+                    Console.WriteLine("Assign Boarding Gates to all Flights before continuing.\n");
+                    return;
+                }
+            }
+
+
+            double overallSubtotal = 0;
+            double overallDiscounts = 0;
+
+            foreach (var airline in Airlines.Values)
+            {
+                Console.WriteLine($"{airline.Name}:");
+
+                double airlineSubtotal = 0;
+                double airlineDiscounts = 0;
 
                 foreach (var flight in airline.Flights.Values)
                 {
-                    // Calculate fees based on origin
-                    if (flight.Origin == "Singapore (SIN)")
-                    {
-                        totalFees += 800; // for flights that depart from singapore
-                    }
-                    else
-                    {
-                        totalFees += 500; // for flights from other origins
-                    }
+                    double flightFee = flight.CalculateFees();
+                    double gateFee = BoardingGates.Values.Any(g => g.Flight?.FlightNumber == flight.FlightNumber) ? 300 : 0;
 
-                    // Add gate fee for flights assigned to a gate
-                    foreach (var gate in BoardingGates.Values)
-                    {
-                        if (gate.Flight?.FlightNumber == flight.FlightNumber)
-                        {
-                            totalFees += 300; 
-                        }
-                    }
+                    double flightDiscount = 0;
+                    if (flight.ExpectedTime.Hour < 11 || flight.ExpectedTime.Hour >= 21)
+                        flightDiscount += 110;
 
-                gateFees[airline.Code] = totalFees;
-                Console.WriteLine($"Airline {airline.Name} (Code: {airline.Code}) - Total Fees: ${totalFees}");
+                    if (flight.Origin.Contains("Dubai (DXB)") || flight.Origin.Contains("Bangkok (BKK)") || flight.Origin.Contains("Tokyo (NRT)"))
+                        flightDiscount += 25;
+
+                    if (string.IsNullOrEmpty(flight.Status))
+                        flightDiscount += 50;
+
+                    double finalFlightFee = flightFee + gateFee - flightDiscount;
+                    airlineSubtotal += flightFee + gateFee;
+                    airlineDiscounts += flightDiscount;
+
+                    Console.WriteLine($"Flight {flight.FlightNumber}: Base Fee: ${flightFee}, Discount: ${flightDiscount}, Final Fee: ${finalFlightFee}");
+                }
+
+                if (airline.Flights.Count > 5)
+                {
+                    airlineDiscounts += airlineSubtotal * 0.03;
+                }
+
+                double airlineFinalTotal = airlineSubtotal - airlineDiscounts;
+
+                Console.WriteLine($"Subtotal: ${airlineSubtotal}, Total Discounts: ${airlineDiscounts}, Final Total: ${airlineFinalTotal}");
+                Console.WriteLine("-------------------------------------------------");
             }
         }
-     }
 
         public override string ToString()
         {

@@ -19,16 +19,7 @@ namespace S10270400_PRG2Assignment
 
         public override double CalculateFees()
         {
-            double fee = 0;
-            // 500 fee
-            fee =+ 500;
-
-            if (Status == "")
-            {
-                
-            }
-
-            return fee;
+            return base.CalculateFees() + 500;
         }
 
         public override string ToString()
