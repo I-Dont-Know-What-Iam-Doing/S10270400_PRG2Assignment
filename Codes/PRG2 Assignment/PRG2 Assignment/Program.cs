@@ -181,7 +181,7 @@ while (true)
     string option = Console.ReadLine();
     {
         // ==============================================================================================================================================================================
-        // + Option 1 (Completed)
+        // + Option 1 (Morgen) [Completed]
         if (option == "1")
         {
             Console.WriteLine("=============================================");
@@ -215,7 +215,7 @@ while (true)
 
 
         // ==============================================================================================================================================================================
-        // + Option 2 (Completed)
+        // + Option 2 (Morgen) [Completed]
         else if (option == "2")
         {
             Console.WriteLine("=============================================");
@@ -238,7 +238,7 @@ while (true)
         // ==============================================================================================================================================================================
 
         // ==============================================================================================================================================================================
-        // + Option 3 (Completed)
+        // + Option 3 (Yao Xiang) [Completed]
         else if (option == "3")
         {
             Console.WriteLine("=============================================");
@@ -427,13 +427,16 @@ while (true)
             // - Append Schedule
 
             Console.WriteLine($"Flight {flnum} has been assigned to Boarding Gate {gname}!");
-
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
-        // - Option 3 (Complete)
+        // - Option 3 (Completed)
         // ==============================================================================================================================================================================
 
         // ==============================================================================================================================================================================
-        // + Option 4 (Complete)
+        // + Option 4 (Yao Xiang) [Completed]
         else if (option == "4")
         {
             Console.WriteLine("=============================================");
@@ -545,26 +548,26 @@ while (true)
                 if (code == "CFFT")
                 {
                     newFlight = new CFFTFlight(flnum, org, des, expTime, code, 0);
-           
+
                 }
 
                 else if (code == "DDJB")
                 {
                     newFlight = new DDJBFlight(flnum, org, des, expTime, code, 0);
-              
+
                 }
 
                 else if (code == "LWTT")
                 {
                     newFlight = new LWTTFlight(flnum, org, des, expTime, code, 0);
-   
+
                 }
 
                 else if (code.ToUpper() == "NONE")
                 {
                     code = "";
                     newFlight = new NORMFlight(flnum, org, des, expTime, code);
-   
+
                 }
 
                 else
@@ -575,7 +578,7 @@ while (true)
                 // - Code Prompt
                 FlightDetails[flnum] = newFlight;
 
-                
+
                 try
                 {
                     string filePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "flights.csv");
@@ -583,7 +586,7 @@ while (true)
                     using (StreamWriter sw = new StreamWriter(filePath, true))
                     {
                         sw.WriteLine($"{flnum},{org},{des},{expTime:hh:mm tt},{code}");
-                        Console.WriteLine($"Flight {flnum} has been added!");                                        
+                        Console.WriteLine($"Flight {flnum} has been added!");
                     }
                 }
                 catch (Exception ex)
@@ -599,12 +602,16 @@ while (true)
                     break;
                 }
             }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
-        // - Option 4 (Complete)
+        // - Option 4 (Completed)
         // ==============================================================================================================================================================================
 
         // ==============================================================================================================================================================================
-        // + Option 5 (Completed)
+        // + Option 5 (Morgen) [Completed]
         else if (option == "5")
         {
             Console.WriteLine("=============================================");
@@ -643,12 +650,16 @@ while (true)
                     Console.WriteLine();
                 }
             }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
-        // - Option 5 (Complete)
+        // - Option 5 (Completed)
         // ==============================================================================================================================================================================
 
         // ==============================================================================================================================================================================
-        // + Option 6 (Complete)
+        // + Option 6 (Morgen) [Completed]
         else if (option == "6")
         {
             Console.WriteLine("=============================================");
@@ -801,7 +812,7 @@ while (true)
                     Console.WriteLine("1. Scheduled");
                     Console.WriteLine("2. Delayed");
                     Console.WriteLine("3. Cancelled");
-                    Console.Write("Enter your option: <Type the number> ");
+                    Console.Write("Enter your option (1/2/3): ");
                     string statusOption = Console.ReadLine();
 
                     if (statusOption == "1")
@@ -822,7 +833,7 @@ while (true)
                         return;
                     }
 
-                    Console.WriteLine($"Flight status updated to: {selectedFlight.Status}");
+                    Console.WriteLine($"Flight status updated to: {selectedFlight.Status}!");
                     UpdateFlightsCSV(FlightDetails);
                 }
                 else if (modifyOption == "3") // modify special req code
@@ -833,7 +844,7 @@ while (true)
                     if (newRequestCode == "DDJB" || newRequestCode == "CFFT" || newRequestCode == "LWTT")
                     {
                         selectedFlight.Status = newRequestCode;
-                        Console.WriteLine($"Special Request Code updated to: {newRequestCode}.");
+                        Console.WriteLine($"Special Request Code updated to: {newRequestCode}!");
                         UpdateFlightsCSV(FlightDetails);
                     }
                     else
@@ -878,12 +889,28 @@ while (true)
                     }
                 }
             }
+            else if (modifyOrDeleteOption == "2") // Delete Flight
+            {
+                Console.Write($"\nAre you sure you want to delete Flight {flightOption}? (Y/N): ");
+                string confirmation = Console.ReadLine().ToUpper();
+
+                if (confirmation == "Y")
+                {
+                    selectedAirline.Flights.Remove(flightOption); // Remove from dictionary
+                    FlightDetails.Remove(flightOption);
+                    Console.WriteLine($"Flight {flightOption} has been deleted.");
+                }
+                else
+                {
+                    Console.WriteLine("Flight deletion cancelled.");
+                }
+            }
         }
         // - Option 6 (Complete)
         // ==============================================================================================================================================================================
 
         // ==============================================================================================================================================================================
-        // + Option 7
+        // + Option 7 (Yao Xiang)
         else if (option == "7")
         {
             Console.WriteLine("=============================================");
@@ -924,7 +951,10 @@ while (true)
 
                 Console.WriteLine($"{flight.FlightNumber,-14} {airlineName,-21} {flight.Origin,-19} {flight.Destination,-19} {formattedTime,-34} {status,-11} {boardingGate,-15}");
             }
-
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
         // - Option 7
         // ==============================================================================================================================================================================
@@ -944,6 +974,10 @@ while (true)
             terminal.Airlines = airlinesDetails;
             terminal.BoardingGates = boardingGatesDetails;
             terminal.PrintAirlineFees();
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
         }
         // - Option 8
         // ==============================================================================================================================================================================
