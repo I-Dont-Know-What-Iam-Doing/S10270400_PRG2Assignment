@@ -181,7 +181,7 @@ while (true)
     string option = Console.ReadLine();
     {
         // ==============================================================================================================================================================================
-        // + Option 1 (Morgen) [Completed]
+        // + Option 1 (Yao Xiang) [Completed]
         if (option == "1")
         {
             Console.WriteLine("=============================================");
@@ -594,7 +594,7 @@ while (true)
                     Console.WriteLine($"Error writing to flights.csv: {ex.Message}");
                 }
 
-                Console.Write("Would you like to add another flight? (Y/N): ");
+                Console.WriteLine("Would you like to add another flight? (Y/N): ");
                 string addMore = Console.ReadLine().ToUpper();
 
                 if (addMore != "Y")
