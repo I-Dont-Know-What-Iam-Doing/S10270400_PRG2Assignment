@@ -31,3 +31,6 @@ QF 897,Singapore (SIN),Sydney (SYD),1:40 PM,
 TR 786,Bangkok (BKK),Singapore (SIN),2:55 PM,
 SQ 123,singapore (sin),india (sin),11:11 am,
 SQ 513,New Zealand (NZ),Singapore (SIN),11:11 am,
+SQ 214,singapore (sin),india (ind),11:11 am,
+SQ 333,Singapore (Sin),India (Ind),11:11 am,
+SQ 933,Singapore (Sin),Bangla (Bag),11:11 am,CFFT

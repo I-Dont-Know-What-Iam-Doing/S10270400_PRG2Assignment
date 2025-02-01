@@ -181,7 +181,7 @@ while (true)
     string option = Console.ReadLine();
     {
         // ==============================================================================================================================================================================
-        // + Option 1 (Yao Xiang) [Completed]
+        // + Option 1 (Morgen & Yao Xiang) [Completed]
         if (option == "1")
         {
             Console.WriteLine("=============================================");
@@ -192,16 +192,15 @@ while (true)
             foreach (KeyValuePair<string, Flight> kvp in FlightDetails)
             {
                 Flight flight = kvp.Value;
-                string airlineName = "Unknown"; // default if no airline that matches is found
+                string airlineName = "Unknown"; // Default if no airline matches
 
-                foreach (var airline in airlinesDetails.Values)
+                string airlineCode = flight.FlightNumber.Substring(0, 2); // Extract airline code from flight number
+
+                if (airlinesDetails.ContainsKey(airlineCode))
                 {
-                    if (airline.Flights.ContainsKey(flight.FlightNumber))
-                    {
-                        airlineName = airline.Name;
-                        break;
-                    }
+                    airlineName = airlinesDetails[airlineCode].Name; // Get airline name directly
                 }
+
                 Console.WriteLine("{0,-17}{1,-25}{2,-25}{3,-25}{4,-20}", flight.FlightNumber, airlineName, flight.Origin, flight.Destination, flight.ExpectedTime);
             }
 
@@ -210,6 +209,7 @@ while (true)
                 Console.WriteLine();
             }
         }
+   
         // - Option 1 (Completed)
         // ==============================================================================================================================================================================
 
