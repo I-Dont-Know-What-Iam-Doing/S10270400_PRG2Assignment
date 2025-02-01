@@ -46,7 +46,6 @@ namespace S10270400_PRG2Assignment
             return fee;
         }
     
-
         public override string ToString()
         {
             return $"{Origin} {Destination} {ExpectedTime} {Status}";
