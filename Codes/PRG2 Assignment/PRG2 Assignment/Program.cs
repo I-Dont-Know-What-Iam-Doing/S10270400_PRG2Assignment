@@ -1047,9 +1047,7 @@ while (true)
                     {
                         if (boardingGate.Flight == null) // Gate must be empty
                         {
-                            if ((currentFlight.Status == "CFFT" && boardingGate.SupportsCFFT) ||
-                                (currentFlight.Status == "DDJB" && boardingGate.SupportsDDJB) ||
-                                (currentFlight.Status == "LWTT" && boardingGate.SupportsLWTT))
+                            if ((currentFlight.Status == "CFFT" && boardingGate.SupportsCFFT) || (currentFlight.Status == "DDJB" && boardingGate.SupportsDDJB) || (currentFlight.Status == "LWTT" && boardingGate.SupportsLWTT))
                             {
                                 assignedGate = boardingGate;
                                 break;
@@ -1088,7 +1086,7 @@ while (true)
             double successRate;
             if (totalUnassignedFlights > 0)
             {
-                successRate = ((double)successfullyAssigned / totalUnassignedFlights) * 100;
+                successRate = ((double) successfullyAssigned / totalUnassignedFlights) * 100;
             }
             else
             {
@@ -1097,7 +1095,7 @@ while (true)
 
             // display the stats
             Console.WriteLine("\n=============================================");
-            Console.WriteLine("Bulk Gate Assignment Summary");
+            Console.WriteLine("Bulk Boarding Gate Assignment Summary");
             Console.WriteLine("=============================================");
             Console.WriteLine($"Total Flights Processed: {totalUnassignedFlights}");
             Console.WriteLine($"Total Boarding Gates Processed: {totalUnassignedGates}");
