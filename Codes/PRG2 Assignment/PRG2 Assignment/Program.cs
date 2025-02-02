@@ -977,6 +977,7 @@ while (true)
             terminal.Airlines = airlinesDetails;
             terminal.BoardingGates = boardingGatesDetails;
             terminal.PrintAirlineFees();
+
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine();
