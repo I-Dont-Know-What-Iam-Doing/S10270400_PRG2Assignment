@@ -673,7 +673,7 @@ while (true)
                 Console.WriteLine("{0,-14}{1,-30}", airline.Code, airline.Name);
             }
 
-            Console.Write("Enter Airline Code: "); // prompt user to key 2 letter airline code
+            Console.WriteLine("Enter Airline Code: "); // prompt user to key 2 letter airline code
             string selectedCode = Console.ReadLine().ToUpper();
 
             // Validate the airline code
@@ -780,12 +780,15 @@ while (true)
                     Console.WriteLine($"Origin: {selectedFlight.Origin}");
                     Console.WriteLine($"Destination: {selectedFlight.Destination}");
                     Console.WriteLine($"Expected Departure/Arrival Time: {selectedFlight.ExpectedTime}");
-                    UpdateFlightsCSV(FlightDetails);
 
                     string flightStatus = selectedFlight.Status;
                     if (string.IsNullOrEmpty(flightStatus))
                     {
                         flightStatus = "Unscheduled";
+                    }
+                    else 
+                    {
+                        flightStatus = "Scheduled";
                     }
                     Console.WriteLine($"Status: {flightStatus}");
 
