@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\s10270400_prg2assignment\\codes\\prg2 assignment\\prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|c:\\documents\\github\\s10270400_prg2assignment\\codes\\prg2 assignment\\prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CEF55268-7942-4F72-986D-A63BBFA45452}|PRG2 Assignment\\PRG2 Assignment.csproj|solutionrelative:prg2 assignment\\flights.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -34,20 +30,7 @@
               "RelativeToolTip": "PRG2 Assignment\\Airline.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwDAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T06:49:19.006Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Flights.csv",
-              "DocumentMoniker": "C:\\Documents\\GitHub\\S10270400_PRG2Assignment\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
-              "RelativeDocumentMoniker": "PRG2 Assignment\\Flights.csv",
-              "ToolTip": "C:\\Documents\\GitHub\\S10270400_PRG2Assignment\\Codes\\PRG2 Assignment\\PRG2 Assignment\\Flights.csv",
-              "RelativeToolTip": "PRG2 Assignment\\Flights.csv",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2025-02-01T14:01:06.293Z"
+              "WhenOpened": "2025-02-02T06:49:19.006Z"
             },
             {
               "$type": "Document",
