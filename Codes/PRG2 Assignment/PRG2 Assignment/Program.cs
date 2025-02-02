@@ -834,6 +834,8 @@ while (true)
                         return;
                     }
 
+                    flightSchedule[selectedFlight.FlightNumber] = selectedFlight.Status;
+
                     Console.WriteLine($"Flight status updated to: {selectedFlight.Status}!");
                     UpdateFlightsCSV(FlightDetails);
                 }
@@ -988,118 +990,121 @@ while (true)
         // + Option 9 (Morgen)
         else if (option == "9")
         {
-            Queue<Flight> unassignedFlights = new Queue<Flight>(); // flights w/o a gate
+            Queue<Flight> unassignedFlights = new Queue<Flight>(); // queue for flights without a gate
 
+            // find all unassigned flights
             foreach (var flight in FlightDetails.Values)
             {
                 bool isAssigned = false;
 
-                foreach (var gate in boardingGatesDetails.Values)
+                // check if the flight already has a boarding gate assigned
+                foreach (var boardingGate in boardingGatesDetails.Values)
                 {
-                    if (gate.Flight != null && gate.Flight.FlightNumber == flight.FlightNumber)
+                    if (boardingGate.Flight != null && boardingGate.Flight.FlightNumber == flight.FlightNumber)
                     {
                         isAssigned = true;
                         break;
                     }
-                    if (!isAssigned)
-                    {
-                        unassignedFlights.Enqueue(flight);
-                    }
                 }
 
-                int totalUnassignedFlights = unassignedFlights.Count;
-                int totalUnassignedGates = 0;
-
-                foreach (var gate in boardingGatesDetails.Values)
+                if (!isAssigned)
                 {
-                    if (gate.Flight == null)
-                    {
-                        totalUnassignedGates++;
-                    }
+                    unassignedFlights.Enqueue(flight);
                 }
+            }
 
-                Console.WriteLine($"\nTotal Unassigned Flights: {totalUnassignedFlights}");
-                Console.WriteLine($"Total Unassigned Boarding Gates: {totalUnassignedGates}\n");
+            int totalUnassignedFlights = unassignedFlights.Count;
+            int totalUnassignedGates = 0;
 
-                int successfullyAssigned = 0;
-
-                while (unassignedFlights.Count > 0)
+            // count unassigned boarding gates
+            foreach (var boardingGate in boardingGatesDetails.Values)
+            {
+                if (boardingGate.Flight == null)
                 {
-                    Flight flight = unassignedFlights.Dequeue();
-                    BoardingGate assignedGate = null;
+                    totalUnassignedGates++;
+                }
+            }
 
-                    if (!string.IsNullOrEmpty(flight.Status)) // if special request exists
-                    {
-                        foreach (var gate in boardingGatesDetails.Values)
-                        {
-                            if (gate.Flight == null) // gate must be empty
-                            {
-                                if ((flight.Status == "CFFT" && gate.SupportsCFFT) ||
-                                    (flight.Status == "DDJB" && gate.SupportsDDJB) ||
-                                    (flight.Status == "LWTT" && gate.SupportsLWTT))
-                                {
-                                    assignedGate = gate;
-                                    break;
-                                }
-                            }
-                        }
-                    }
+            Console.WriteLine($"\nTotal Unassigned Flights: {totalUnassignedFlights}");
+            Console.WriteLine($"Total Unassigned Boarding Gates: {totalUnassignedGates}\n");
 
-                    if (assignedGate == null)
+            int successfullyAssigned = 0;
+
+            // assign flights from the queue
+            while (unassignedFlights.Count > 0)
+            {
+                Flight currentFlight = unassignedFlights.Dequeue();
+                BoardingGate assignedGate = null;
+
+                // check if the flight has a special request
+                if (!string.IsNullOrEmpty(currentFlight.Status)) // if special request exists
+                {
+                    foreach (var boardingGate in boardingGatesDetails.Values)
                     {
-                        foreach (var gate in boardingGatesDetails.Values)
+                        if (boardingGate.Flight == null) // Gate must be empty
                         {
-                            if (gate.Flight == null) // gate must be empty
+                            if ((currentFlight.Status == "CFFT" && boardingGate.SupportsCFFT) ||
+                                (currentFlight.Status == "DDJB" && boardingGate.SupportsDDJB) ||
+                                (currentFlight.Status == "LWTT" && boardingGate.SupportsLWTT))
                             {
-                                assignedGate = gate;
+                                assignedGate = boardingGate;
                                 break;
                             }
                         }
                     }
+                }
 
-                    if (assignedGate != null)
+                // find any available gate, since no special req
+                if (assignedGate == null)
+                {
+                    foreach (var boardingGate in boardingGatesDetails.Values)
                     {
-                        assignedGate.Flight = flight;
-                        Console.WriteLine($"Flight {flight.FlightNumber} assigned to Gate {assignedGate.GateName}.");
-                        successfullyAssigned++;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"No available gate for Flight {flight.FlightNumber}.");
+                        if (boardingGate.Flight == null) // gate must be empty
+                        {
+                            assignedGate = boardingGate;
+                            break;
+                        }
                     }
                 }
 
-                double successRate;
-                if (totalUnassignedFlights > 0)
+                // assign the flight to the found gate
+                if (assignedGate != null)
                 {
-                    successRate = ((double)successfullyAssigned / totalUnassignedFlights) * 100;
+                    assignedGate.Flight = currentFlight;
+                    Console.WriteLine($"Flight {currentFlight.FlightNumber} assigned to Gate {assignedGate.GateName}.");
+                    successfullyAssigned++;
                 }
                 else
                 {
-                    successRate = 0; 
+                    Console.WriteLine($"No available gate for Flight {currentFlight.FlightNumber}.");
                 }
+            }
 
-                Console.WriteLine("\n=============================================");
-                Console.WriteLine("Bulk Assignment Summary");
-                Console.WriteLine("=============================================");
-                Console.WriteLine($"Total Flights Processed: {totalUnassignedFlights}");
-                Console.WriteLine($"Total Boarding Gates Processed: {totalUnassignedGates}");
-                Console.WriteLine($"Successful Assignments: {successfullyAssigned}");
-                Console.WriteLine($"Automatic Assignment Rate: {successRate:F2}%\n");
+            // calculate assignment percentage
+            double successRate;
+            if (totalUnassignedFlights > 0)
+            {
+                successRate = ((double)successfullyAssigned / totalUnassignedFlights) * 100;
+            }
+            else
+            {
+                successRate = 0; // avoid dividing by zero
+            }
+
+            // display the stats
+            Console.WriteLine("\n=============================================");
+            Console.WriteLine("Bulk Gate Assignment Summary");
+            Console.WriteLine("=============================================");
+            Console.WriteLine($"Total Flights Processed: {totalUnassignedFlights}");
+            Console.WriteLine($"Total Boarding Gates Processed: {totalUnassignedGates}");
+            Console.WriteLine($"Successful Assignments: {successfullyAssigned}");
+            Console.WriteLine($"Automatic Assignment Rate: {successRate:F2}%");
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
         // - Option 9
         // ==============================================================================================================================================================================
 
