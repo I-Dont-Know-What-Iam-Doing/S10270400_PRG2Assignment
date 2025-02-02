@@ -168,7 +168,7 @@ void Menu()
     Console.WriteLine("5. Display Airline Flights");
     Console.WriteLine("6. Modify Flight Details");
     Console.WriteLine("7. Display Flight Schedule");
-    Console.WriteLine("8. Display Tota Airline and Flight Fees");
+    Console.WriteLine("8. Display Total Airline and Flight Fees");
     Console.WriteLine("9. Bulk Assign Unassigned Flights to Boarding Gates"); 
     Console.WriteLine("0. Exit");
     Console.WriteLine("");
@@ -546,20 +546,23 @@ while (true)
 
                 Flight newFlight = null;
 
-                if (code == "CFFT")
+                if (code.ToUpper() == "CFFT")
                 {
+                    code = code.ToUpper();
                     newFlight = new CFFTFlight(flnum, org, des, expTime, code, 0);
 
                 }
 
-                else if (code == "DDJB")
+                else if (code.ToUpper() == "DDJB")
                 {
+                    code = code.ToUpper();
                     newFlight = new DDJBFlight(flnum, org, des, expTime, code, 0);
 
                 }
 
-                else if (code == "LWTT")
+                else if (code.ToUpper() == "LWTT")
                 {
+                    code = code.ToUpper();
                     newFlight = new LWTTFlight(flnum, org, des, expTime, code, 0);
 
                 }
@@ -583,8 +586,10 @@ while (true)
                 try
                 {
                     string filePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "flights.csv");
+                    string debugPath = Path.Combine(Directory.GetCurrentDirectory(), "flights.csv");
 
                     using (StreamWriter sw = new StreamWriter(filePath, true))
+                    using (StreamWriter swDebug = new StreamWriter(debugPath, true))
                     {
                         sw.WriteLine($"{flnum},{org},{des},{expTime:hh:mm tt},{code}");
                         Console.WriteLine($"Flight {flnum} has been added!");

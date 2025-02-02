@@ -4,7 +4,7 @@
 // Partner Name : Morgen Yap
 //==========================================================
 
-// Request fee unfinished
+
 namespace S10270400_PRG2Assignment
 {
     class DDJBFlight : Flight
